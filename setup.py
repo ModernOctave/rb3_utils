@@ -18,7 +18,7 @@ setup(
     maintainer='Om Patil',
     maintainer_email='s4patil@ucsd.edu',
     description='A set of ROS utilities for the Qualcomm RB3',
-    license='TODO: License declaration',
+    license='MIT',
     entry_points={
         'console_scripts': [
             'camera_viewer = rb3_utils.camera_viewer:main',

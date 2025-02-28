@@ -5,7 +5,7 @@
   <version>0.0.0</version>
   <description>A set of ROS utilities for the Qualcomm RB3</description>
   <maintainer email="s4patil@ucsd.edu">Om Patil</maintainer>
-  <license>TODO: License declaration</license>
+  <license>MIT</license>
 
   <exec_depend>gscam</exec_depend>
 
