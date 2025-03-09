@@ -20,7 +20,7 @@ def generate_launch_description():
         output='screen',
         parameters=[{
             "camera_name": "camera_main",
-            "camera_info_url": "package://gscam/examples/uncalibrated_parameters.ini",
+            "camera_info_url": "package://rb3_utils/config/camera_main_parameters.ini",
             "gscam_config": "qtiqmmfsrc camera=0 ! video/x-raw,format=NV12,width=1920,height=1080,framerate=30/1 ! videoconvert",
             "use_gst_timestamps": True,
             "frame_id": "/camera_main",
@@ -31,8 +31,10 @@ def generate_launch_description():
         remappings=[
             ('/camera/camera_info', '/camera_main/camera_info'),
             ('/camera/image_raw', '/camera_main/image_raw'),
-            ('/camera/image_raw/compressed', '/camera_main/image_raw/compressed')
+            ('/camera/image_raw/compressed', '/camera_main/image_raw/compressed'),
+            ('/set_camera_info', '/camera_main/set_camera_info')
         ]
+    )
     )
 
     # Define the camera viewer node
