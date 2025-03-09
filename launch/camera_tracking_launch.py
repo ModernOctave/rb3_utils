@@ -25,11 +25,13 @@ def generate_launch_description():
             "use_gst_timestamps": True,
             "frame_id": "/camera_tracking",
             "sync_sink": False,
+            "camera.image_raw.jpeg_quality": 70
         }],
         arguments=[{'use_intra_process_comms': True}],
         remappings=[
-            ('/camera/image_raw', '/camera_tracking/image_raw'),
             ('/camera/camera_info', '/camera_tracking/camera_info'),
+            ('/camera/image_raw', '/camera_tracking/image_raw'),
+            ('/camera/image_raw/compressed', '/camera_tracking/image_raw/compressed')
         ]
     )
 
